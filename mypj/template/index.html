@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>${.title}-demo</title>
+    <link rel="stylesheet" href="/resource/css/common.css">
+</head>
+
+<body>
+
+<div>
+    <ul>
+        ${range $k,$data := .listData}
+        <li>${$k}-${$data.name}-${$data.address}--${$data.date}</li>
+        ${end}
+    </ul>
+</div>
+<footer>
+    <p>copyRight @ 2021</p>xxx.com
+</footer>
+</body>
+</html>

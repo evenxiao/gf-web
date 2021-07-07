@@ -1,0 +1,39 @@
+# HTTP Server
+[server]
+	Address     = ":8199"
+	ServerRoot  = "public"
+	ServerAgent = "gf-app"
+	LogPath     = "./tmp/log/gf-app/server"
+
+# Logger.
+[logger]
+    Path        = "./tmp/log/gf-app"
+    Level       = "all"
+    stdout = true
+
+# Template.
+[viewer]
+    Path        = "template"
+    DefaultFile = "index.html"
+    Delimiters  =  ["${", "}"]
+
+# Database.
+[database]
+    link  = "mysql:root:root@tcp(127.0.0.1:3306)/youmao"
+    debug = true
+    # Database logger.
+    [database.logger]
+        Path   = "./tmp/log/gf-app/sql"
+        Level  = "all"
+        Stdout = true
+
+# 工具相关配置
+[gfcli]
+    # 工具编译配置
+    [gfcli.build]
+        name     = "gfpj"
+        arch     = "amd64"
+        system   = "linux,darwin,windows"
+        pack     = "public,template"
+        mod      = ""
+        cgo      = 0

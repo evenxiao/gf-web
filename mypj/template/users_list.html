@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>${.name}-demo</title>
+    <link rel="stylesheet" href="/resource/css/common.css">
+</head>
+
+<body>
+
+<div>
+    <ul>
+        ${range $index, $u := .list}
+        <li>
+        <h2>id ${$u.UserId}</h2>
+        <hr>
+        <strong style="color: red">name ${$u.UserName}</strong>
+            <br/><br/>
+        <strong style="color: blue">name ${$u.Email}</strong>
+        </li>
+        ${end}
+    </ul>
+</div>
+<footer>
+    <p style="margin: 0 auto; width: 1000px; text-align: center;">copyRight @ 2021 &nbsp;&nbsp;&nbsp;&nbsp; xxx.com</p>
+</footer>
+</body>
+</html>
